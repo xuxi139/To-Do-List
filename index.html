@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Blog</title>
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar" id="home">
+      <div class="navbar-flex container">
+        <h1><i class="fa-regular fa-pen-to-square"></i>&nbsp;To-Do List</h1>
+        <p>Getting things done🤞🏾</p>
+      </div>
+    </nav>
+
+    <div class="hero">
+        <div class="wrapper">
+            <div class="sidebar">
+              <h2>Task Progress</h2>
+              <ul>
+                <li onclick="filterTasks('all')">
+                    <pre> All Tasks (<span id="all-count">0</span>)</pre>
+                </li>
+                <li onclick="filterTasks('pending')">
+                  <pre>Pending Tasks (<span id="pending-count">0</span>)</pre>
+                </li>
+                <li onclick="filterTasks('completed')">
+                 <pre>Completed Tasks(<span id="completed-count">0</span>)</pre>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="main-content">
+              <h1>To-Do List</h1>
+              <div class="input-container">
+                <input type="text" id="new-task" placeholder="Enter a new task" />
+                <button onclick="addTask()">Add Task</button>
+              </div>
+      
+              <ul id="task-list">
+              </ul>
+            </div>
+          </div>
+    </div>
+    <footer><strong><p>Copyrights &copy; 2024 TO-DO LIST.<div> All rights reserved.</div> </p></strong></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
